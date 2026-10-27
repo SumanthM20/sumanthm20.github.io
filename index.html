@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sumanth Manohar | Data Scientist & ML Engineer</title>
+<meta name="description" content="Sumanth Manohar: Data Scientist and ML Engineer building production ML and LLM systems, RAG, and LLM evaluation and observability. MS in Data Science, University of Arizona.">
+<meta property="og:title" content="Sumanth Manohar | Data Scientist & ML Engineer">
+<meta property="og:description" content="Production ML and LLM systems, RAG, evaluation and observability. Open to relocation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6f2; --surface:#ffffff; --surface-2:#efede6; --text:#1b1d22; --muted:#5b6070;
+  --line:#dedad0; --accent:#1f5f8b; --accent-soft:#e2edf5; --accent-2:#b4532a; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111317; --surface:#181b21; --surface-2:#1f232b; --text:#eceef2; --muted:#9aa1b0;
+    --line:#2b303a; --accent:#7fb6dd; --accent-soft:#1b2a36; --accent-2:#e39a76; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111317; --surface:#181b21; --surface-2:#1f232b; --text:#eceef2; --muted:#9aa1b0;
+  --line:#2b303a; --accent:#7fb6dd; --accent-soft:#1b2a36; --accent-2:#e39a76; --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.2;margin:0}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.brand{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:700;color:var(--text)}
+.navlinks{display:flex;gap:18px;font-size:14px}
+.navlinks a{color:var(--muted)}
+.navlinks a:hover{color:var(--text);text-decoration:none}
+@media (max-width:640px){.navlinks{display:none}}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-2);font-weight:600}
+.hero h1{font-size:clamp(36px,6vw,58px);margin:12px 0 14px}
+.hero .role{font-size:clamp(18px,2.4vw,22px);color:var(--muted);max-width:760px}
+.hero .role strong{color:var(--text);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 28px}
+.chip{font-size:13px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.btn:hover{text-decoration:none;border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0e1418}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#0e1418}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:28px;color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted)}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:26px;flex-wrap:wrap}
+.sec-head h2{font-size:28px}
+.sec-head p{margin:0;color:var(--muted);font-size:15px}
+
+/* experience */
+.job{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:22px 0;border-bottom:1px dashed var(--line)}
+.job:last-child{border-bottom:0}
+.job .when{color:var(--muted);font-size:14px}
+.job .when b{display:block;color:var(--text);font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:17px;margin-bottom:2px}
+.job h3{font-size:19px;margin-bottom:8px}
+.job ul{margin:0;padding-left:18px}
+.job li{margin:6px 0}
+.job li em{font-style:normal;font-weight:600;color:var(--accent)}
+@media (max-width:700px){.job{grid-template-columns:1fr;gap:6px}}
+
+/* projects */
+.projects{display:grid;gap:18px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+.proj-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.proj h3{font-size:22px}
+.tag{font-size:12px;color:var(--muted)}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 16px}
+.stack span{font-size:12px;padding:3px 8px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
+.pcols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcols h4{margin:0 0 4px;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-2)}
+.pcols p{margin:0;font-size:15px}
+@media (max-width:760px){.pcols{grid-template-columns:1fr}}
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:18px;padding:12px;border-radius:10px;background:var(--accent-soft)}
+.flow .n{font-size:12.5px;padding:5px 9px;border-radius:6px;background:var(--surface);border:1px solid var(--line);white-space:nowrap}
+.flow .a{color:var(--accent);font-size:13px}
+.proj .links{margin-top:14px;font-size:14px}
+.note{font-size:13px;color:var(--muted);margin-top:8px}
+
+.other{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.other div{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--surface)}
+.other h4{margin:0 0 6px;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:16px}
+.other p{margin:0;font-size:14.5px;color:var(--muted)}
+@media (max-width:700px){.other{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.skill h3{font-size:16px;margin-bottom:10px}
+.skill .stack{margin:0}
+@media (max-width:700px){.skills{grid-template-columns:1fr}}
+
+/* education */
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.edu div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.edu h3{font-size:17px;margin-bottom:4px}
+.edu p{margin:0;color:var(--muted);font-size:14.5px}
+.certs{margin-top:14px;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.certs h3{font-size:16px;margin-bottom:8px}
+.certs ul{margin:0;padding-left:18px;color:var(--muted);font-size:14.5px}
+@media (max-width:700px){.edu{grid-template-columns:1fr}}
+
+/* contact */
+.contact{text-align:center;padding:64px 0}
+.contact h2{font-size:32px;margin-bottom:10px}
+.contact p{color:var(--muted);max-width:560px;margin:0 auto 22px}
+.contact .cta{justify-content:center}
+footer{padding:24px 0 40px;text-align:center;font-size:13px;color:var(--muted)}
+.theme{background:none;border:1px solid var(--line);border-radius:8px;color:var(--muted);padding:5px 9px;cursor:pointer;font:inherit;font-size:13px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Sumanth Manohar</a>
+    <div class="navlinks">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme" id="themeBtn" aria-label="Toggle color theme">Theme</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Data Scientist · ML Engineer</div>
+    <h1>Sumanth Manohar</h1>
+    <p class="role">I build <strong>production ML and LLM systems</strong> and the <strong>evaluation, monitoring, and observability</strong> that keep them reliable after launch. Currently a Data Scientist at <strong>Walmart Global Tech</strong>; MS in Data Science, <strong>University of Arizona</strong>.</p>
+    <div class="chips">
+      <span class="chip">Demand forecasting</span>
+      <span class="chip">RAG &amp; LLM systems</span>
+      <span class="chip">LLM evaluation</span>
+      <span class="chip">MLOps</span>
+      <span class="chip">Tucson, AZ · Open to relocation</span>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Download resume</a>
+      <a class="btn" href="mailto:sumanthmanohar2011@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/sumanth-manohar-053b6713a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/SumanthM20" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>3+ yrs</b><span>building production ML</span></div>
+      <div class="stat"><b>500K+</b><span>supply-chain records processed daily</span></div>
+      <div class="stat"><b>18%</b><span>demand-forecast accuracy gain at Walmart</span></div>
+      <div class="stat"><b>40%</b><span>less analyst research time with RAG</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><h2>Experience</h2><p>Shipping models that teams rely on</p></div>
+
+    <div class="job">
+      <div class="when"><b>Walmart Global Tech</b>May 2025 – Present<br>USA</div>
+      <div>
+        <h3>Data Scientist</h3>
+        <ul>
+          <li>Improved demand-forecast accuracy <em>18%</em> with end-to-end forecasting pipelines on 500K+ daily supply-chain records (Python, Apache Spark, GCP Vertex AI).</li>
+          <li>Cut analyst research time <em>40%</em> and improved answer precision <em>25%</em> with an LLM-powered RAG knowledge retrieval system on vector databases.</li>
+          <li>Reduced unplanned model retraining <em>35%</em> by automating production monitoring: drift detection, performance tracking, and MLflow registry workflows.</li>
+          <li>Lowered compute costs <em>22%</em> with no latency loss at peak load by containerizing ML inference on Docker and Kubernetes with auto-scaling.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when"><b>Maxgen Technologies</b>Feb 2021 – Jun 2023<br>India</div>
+      <div>
+        <h3>Data Scientist</h3>
+        <ul>
+          <li>Lifted user conversion <em>12%</em> by designing A/B testing frameworks for personalized recommendation models.</li>
+          <li>Raised extraction precision <em>22%</em> and eliminated 60+ hours/month of manual review with transformer NLP pipelines for classification, NER, and extraction.</li>
+          <li>Improved classification accuracy <em>28%</em> on high-volume datasets with XGBoost, LightGBM, and TensorFlow.</li>
+          <li>Cut new-model lead time by <em>two weeks</em> with a shared, versioned feature store, and improved deployment reproducibility <em>30%</em> on AWS SageMaker.</li>
+          <li>Helped drive a <em>20%</em> increase in cross-functional AI adoption by explaining model decisions to non-technical stakeholders with SHAP/LIME.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head"><h2>Featured projects</h2><p>Open source on GitHub</p></div>
+    <div class="projects">
+
+      <article class="proj">
+        <div class="proj-top">
+          <h3>LLM Evaluation &amp; Regression Pipeline</h3>
+          <span class="tag mono">prompt-eval-pipeline</span>
+        </div>
+        <div class="stack"><span>Python</span><span>Pydantic</span><span>Anthropic &amp; OpenAI APIs</span><span>pytest</span><span>GitHub Actions</span><span>Docker</span></div>
+        <div class="pcols">
+          <div><h4>Problem</h4><p>Prompt changes can silently break an LLM feature, and "looks fine" isn't a release criterion.</p></div>
+          <div><h4>Approach</h4><p>Every prompt change runs against a 60-case human-curated golden dataset, including ambiguous, typo, multilingual, sarcasm, and multi-intent stress cases, scored by exact match and LLM-as-judge rubrics.</p></div>
+          <div><h4>Result</h4><p>CI gates warn at a 3-point accuracy drop and block merges at 8 points overall or 10 points in any category, with HTML diff reports, PR comments, and Slack alerts.</p></div>
+        </div>
+        <div class="flow" aria-label="Pipeline flow">
+          <span class="n">Prompt change (PR)</span><span class="a">→</span>
+          <span class="n">Run golden dataset</span><span class="a">→</span>
+          <span class="n">Score + LLM judge</span><span class="a">→</span>
+          <span class="n">Diff vs. baseline</span><span class="a">→</span>
+          <span class="n">Pass / warn / block</span>
+        </div>
+        <div class="links"><a href="https://github.com/SumanthM20/prompt-eval-pipeline" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-top">
+          <h3>AI Pipeline Forensics</h3>
+          <span class="tag mono">ai-pipeline-forensics</span>
+        </div>
+        <div class="stack"><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>SQLite</span><span>Docker Compose</span></div>
+        <div class="pcols">
+          <div><h4>Problem</h4><p>Multi-step LLM pipelines fail silently: one step returns a confident wrong answer while every step reports success.</p></div>
+          <div><h4>Approach</h4><p>Step-level tracing of a 4-stage document pipeline, then a backward root-cause analyzer that walks failed runs to the step that introduced the error.</p></div>
+          <div><h4>Result</h4><p>A 7-category failure taxonomy, adversarial test documents, and confirmed failures turned automatically into permanent regression tests tracked on a dashboard.</p></div>
+        </div>
+        <div class="flow" aria-label="Pipeline flow">
+          <span class="n">Intake</span><span class="a">→</span>
+          <span class="n">Extract entities</span><span class="a">→</span>
+          <span class="n">Classify</span><span class="a">→</span>
+          <span class="n">Summarize</span><span class="a">⟲</span>
+          <span class="n">Trace back to root cause</span><span class="a">→</span>
+          <span class="n">Regression test</span>
+        </div>
+        <div class="links"><a href="https://github.com/SumanthM20/ai-pipeline-forensics" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-top">
+          <h3>LLM Cost Autopilot</h3>
+          <span class="tag mono">llm-cost-autopilot</span>
+        </div>
+        <div class="stack"><span>Python</span><span>scikit-learn</span><span>FastAPI</span><span>Streamlit</span><span>SQLite</span><span>Docker</span></div>
+        <div class="pcols">
+          <div><h4>Problem</h4><p>Sending every request to the most capable model is expensive; most prompts don't need it.</p></div>
+          <div><h4>Approach</h4><p>A classifier (lexical features + TF-IDF) routes each prompt to the cheapest capable model across 3 Claude/GPT tiers in under 5ms; a background verifier checks quality against a top-tier baseline and escalates when it drops.</p></div>
+          <div><h4>Result</h4><p>59% lower API cost than an all-top-tier baseline on 300 seeded synthetic requests, with every decision logged and shown on a live KPI dashboard.</p></div>
+        </div>
+        <div class="flow" aria-label="Pipeline flow">
+          <span class="n">Request</span><span class="a">→</span>
+          <span class="n">Classifier (&lt;5ms)</span><span class="a">→</span>
+          <span class="n">Cheapest capable tier</span><span class="a">→</span>
+          <span class="n">Response</span><span class="a">+</span>
+          <span class="n">Async quality check → escalate</span>
+        </div>
+        <p class="note">Results are from simulated traffic, not production.</p>
+        <div class="links"><a href="https://github.com/SumanthM20/llm-cost-autopilot" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </article>
+    </div>
+
+    <div class="other">
+      <div>
+        <h4>Cloud Forensics Using LLMs</h4>
+        <p>An LLM and RAG pipeline that triages 500+ AWS CloudTrail logs daily, cutting investigation time 60%. Research paper in progress.</p>
+      </div>
+      <div>
+        <h4>Stock Prediction with News Sentiment</h4>
+        <p>A multivariate LSTM combining market prices with financial-news sentiment features, reducing mean squared error 20%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>ML &amp; Statistics</h3><div class="stack"><span>Forecasting</span><span>Classification</span><span>Recommendation systems</span><span>XGBoost</span><span>LightGBM</span><span>PyTorch</span><span>TensorFlow</span><span>A/B testing</span><span>Hypothesis testing</span></div></div>
+      <div class="skill"><h3>NLP &amp; GenAI</h3><div class="stack"><span>LLMs</span><span>RAG</span><span>Vector databases</span><span>Prompt engineering</span><span>LLM evaluation</span><span>Hugging Face Transformers</span><span>spaCy</span></div></div>
+      <div class="skill"><h3>Data &amp; MLOps</h3><div class="stack"><span>Python</span><span>SQL</span><span>R</span><span>Apache Spark</span><span>Databricks</span><span>Airflow</span><span>Snowflake</span><span>MLflow</span><span>Docker</span><span>Kubernetes</span><span>FastAPI</span><span>CI/CD</span></div></div>
+      <div class="skill"><h3>Cloud</h3><div class="stack"><span>AWS (SageMaker, Lambda)</span><span>GCP (Vertex AI)</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head"><h2>Education</h2></div>
+    <div class="edu">
+      <div><h3>MS in Data Science</h3><p>University of Arizona, USA · Dec 2025</p></div>
+      <div><h3>BE in Computer Science</h3><p>Dayananda Sagar College of Engineering, India · 2020 – 2024</p></div>
+    </div>
+    <div class="certs">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Foundation Certificate in Programming and Data Science, IIT Madras (Online)</li>
+        <li>IBM Data Science Professional Certificate</li>
+        <li>Google Data Analytics Certificate</li>
+        <li>AWS Cloud Technical Essentials</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p>I'm looking for Data Scientist, ML Engineer, and AI Engineer roles and am open to relocating anywhere in the US.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:sumanthmanohar2011@gmail.com">sumanthmanohar2011@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/sumanth-manohar-053b6713a/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/SumanthM20" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Sumanth Manohar</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn'), saved=null;
+  try{saved=localStorage.getItem('theme')}catch(e){}
+  if(saved) root.setAttribute('data-theme',saved);
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
